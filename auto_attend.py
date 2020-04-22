@@ -20,10 +20,9 @@ flag = True
 
 try:
     driver.get("https://bulkmro.hrstoppro.com/")
-    log_file.write("Page request SUCCESSFUL at "+ datetime.now().strftime("%b %d, %H:%M"))
 except:
     flag = False
-    log_file.write("Page request FAILED at "+ datetime.now().strftime("%b %d, %H:%M"))
+    log_file.write(datetime.now().strftime("%b %d, %H:%M") + "  : Page request FAILED.")
 
 if flag:
     try:
@@ -35,7 +34,7 @@ if flag:
         form.send_keys(password)
         form.submit()
 
-        log_file.write("Logged in at "+ datetime.now().strftime("%b %d, %H:%M"))
+        log_file.write(datetime.now().strftime("%b %d, %H:%M") + ": New sign-in")
     except:
         pass
 
@@ -48,11 +47,11 @@ if flag:
     if time_now>time_of_login and time_now<last_time_of_login:
         button = driver.find_element_by_id('timein')
         button.click()
-        log_file.write("Login at "+ datetime.now().strftime("%b %d, %H:%M"))
+        log_file.write(datetime.now().strftime("%b %d, %H:%M") + "Login successful\n\n")
     elif time_now>time_of_logout and time_now<last_time_of_logout:
         button = driver.find_element_by_id('timeout')
         button.click()
-        log_file.write("Logout at "+ datetime.now().strftime("%b %d, %H:%M"))
+        log_file.write(datetime.now().strftime("%b %d, %H:%M") + "Logout successful\n\n")
 
 log_file.close()
 driver.close()
