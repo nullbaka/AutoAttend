@@ -1,3 +1,5 @@
+AutoLogin
+
 Download chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
 Make sure it is compatible with your browser.
 Place chromedriver executable in the project directory.
