@@ -8,13 +8,14 @@ from creds import *
 
 dirname = os.path.dirname(__file__)
 chromedriver = os.path.join(dirname, 'chromedriver')
+log_file_path = os.path.join(dirname, 'logs.txt')
 
 options = Options()
 options.add_argument("--user-data-dir=./chrome_profile/")
 options.add_argument("--profile-directory=AutoLogin")
 driver = webdriver.Chrome(executable_path=chromedriver, options=options)
 
-log_file = open("logs.txt", "a+")
+log_file = open(log_file_path, "a+")
 flag = True
 
 try:
