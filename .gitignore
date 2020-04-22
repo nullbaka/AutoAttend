@@ -1,0 +1,6 @@
+creds.py
+chromedriver
+chrome_profile/
+__pycache__/
+.DS_Store
+phantomjs/
