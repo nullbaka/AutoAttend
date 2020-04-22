@@ -1,6 +1,6 @@
 ## **AutoLogin**
 
-Script to sign in to hrstop and login or logout.
+Script to automate login and logout in hrstop.
 To be run as CRON job twice as day.
 
 Download chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
