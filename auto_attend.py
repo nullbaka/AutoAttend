@@ -47,11 +47,11 @@ if flag:
     if time_now>time_of_login and time_now<last_time_of_login:
         button = driver.find_element_by_id('timein')
         button.click()
-        log_file.write(datetime.now().strftime("%b %d, %H:%M") + "Login successful\n\n")
+        log_file.write(datetime.now().strftime("%b %d, %H:%M") + " - Login successful\n")
     elif time_now>time_of_logout and time_now<last_time_of_logout:
         button = driver.find_element_by_id('timeout')
         button.click()
-        log_file.write(datetime.now().strftime("%b %d, %H:%M") + "Logout successful\n\n")
+        log_file.write(datetime.now().strftime("%b %d, %H:%M") + " - Logout successful\n\n")
 
 log_file.close()
 driver.close()
